@@ -1,0 +1,681 @@
+use admin
+switched to db admin
+use tutorFindingSystem
+switched to db tutorFindingSystem
+db.createCollection("students");
+{ ok: 1 }
+db.students.insertMany([
+    {
+        student_id: "S001",
+        name: "Emily Johnson",
+        email: "emily.johnson@example.com",
+        phone_number: "+1-555-123-4567",
+        subjects: ["Mathematics", "Physics"],
+        grade_level: 10,
+        location: "New York, USA",
+        preferred_time: "Weekdays, 4 PM - 6 PM",
+        rating: 4.8,
+        requests: ["R1001", "R1005", "R1010"]
+    },
+    {
+        student_id: "S002",
+        name: "Aakash Sharma",
+        email: "aakash.sharma@example.com",
+        phone_number: "+91-9876543210",
+        subjects: ["Chemistry", "Biology"],
+        grade_level: 12,
+        location: "Delhi, India",
+        preferred_time: "Weekends, 10 AM - 12 PM",
+        rating: 4.6,
+        requests: ["R1002", "R1008"]
+    },
+    {
+        student_id: "S003",
+        name: "Maria Gonzalez",
+        email: "maria.gonzalez@example.com",
+        phone_number: "+34-666-987-654",
+        subjects: ["English Literature", "History"],
+        grade_level: 8,
+        location: "Madrid, Spain",
+        preferred_time: "Weekdays, 5 PM - 7 PM",
+        rating: 4.9,
+        requests: ["R1003", "R1012", "R1015"]
+    },
+    {
+        student_id: "S004",
+        name: "John Smith",
+        email: "john.smith@example.com",
+        phone_number: "+44-700-567-890",
+        subjects: ["Computer Science", "Mathematics"],
+        grade_level: "Undergraduate",
+        location: "London, UK",
+        preferred_time: "Weekdays, 2 PM - 4 PM",
+        rating: 4.7,
+        requests: ["R1004", "R1011"]
+    },
+    {
+        student_id: "S005",
+        name: "Sophie Lee",
+        email: "sophie.lee@example.com",
+        phone_number: "+61-412-345-678",
+        subjects: ["Geography", "English"],
+        grade_level: 11,
+        location: "Sydney, Australia",
+        preferred_time: "Weekends, 9 AM - 11 AM",
+        rating: 4.5,
+        requests: ["R1006", "R1013"]
+    }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('66f2e10040725539c2deaf7d'),
+    '1': ObjectId('66f2e10040725539c2deaf7e'),
+    '2': ObjectId('66f2e10040725539c2deaf7f'),
+    '3': ObjectId('66f2e10040725539c2deaf80'),
+    '4': ObjectId('66f2e10040725539c2deaf81')
+  }
+}
+db.createCollection("tutors");
+{ ok: 1 }
+db.tutors.insertMany([
+    {
+        tutor_id: "T001",
+        name: "Dr. Alice Brown",
+        email: "alice.brown@example.com",
+        phone_number: "+1-555-234-5678",
+        specialization_subjects: ["Mathematics", "Physics"],
+        experience_years: 10,
+        qualifications: "PhD in Physics",
+        availability: "Weekdays, 9 AM - 3 PM",
+        hourly_rate: 50,
+        rating: 4.9,
+        languages_spoken: ["English", "Spanish"]
+    },
+    {
+        tutor_id: "T002",
+        name: "Raj Patel",
+        email: "raj.patel@example.com",
+        phone_number: "+91-9876543210",
+        specialization_subjects: ["Chemistry", "Biology"],
+        experience_years: 8,
+        qualifications: "M.Sc. in Chemistry",
+        availability: "Weekends, 11 AM - 3 PM",
+        hourly_rate: 45,
+        rating: 4.7,
+        languages_spoken: ["English", "Hindi"]
+    },
+    {
+        tutor_id: "T003",
+        name: "Laura Smith",
+        email: "laura.smith@example.com",
+        phone_number: "+44-701-234-567",
+        specialization_subjects: ["English Literature", "History"],
+        experience_years: 6,
+        qualifications: "MA in English Literature",
+        availability: "Weekdays, 2 PM - 6 PM",
+        hourly_rate: 40,
+        rating: 4.8,
+        languages_spoken: ["English", "French"]
+    },
+    {
+        tutor_id: "T004",
+        name: "Carlos Garcia",
+        email: "carlos.garcia@example.com",
+        phone_number: "+34-665-432-109",
+        specialization_subjects: ["Computer Science", "Mathematics"],
+        experience_years: 12,
+        qualifications: "B.Sc. in Computer Science",
+        availability: "Weekdays, 10 AM - 4 PM",
+        hourly_rate: 55,
+        rating: 4.9,
+        languages_spoken: ["Spanish", "English"]
+    },
+    {
+        tutor_id: "T005",
+        name: "Sophie Wang",
+        email: "sophie.wang@example.com",
+        phone_number: "+61-412-678-901",
+        specialization_subjects: ["Geography", "English"],
+        experience_years: 5,
+        qualifications: "B.A. in Geography",
+        availability: "Weekends, 9 AM - 1 PM",
+        hourly_rate: 42,
+        rating: 4.6,
+        languages_spoken: ["English", "Mandarin"]
+    }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('66f2e11940725539c2deaf82'),
+    '1': ObjectId('66f2e11940725539c2deaf83'),
+    '2': ObjectId('66f2e11940725539c2deaf84'),
+    '3': ObjectId('66f2e11940725539c2deaf85'),
+    '4': ObjectId('66f2e11940725539c2deaf86')
+  }
+}
+db.createCollection("requests");
+{ ok: 1 }
+db.requests.insertMany([
+    {
+        request_id: "R1001",
+        student_id: "S001",
+        tutor_id: "T001",
+        subject: "Mathematics",
+        session_time: ISODate("2024-09-25T16:00:00Z"),
+        status: "Pending",
+        message: "Need help with calculus.",
+        session_duration: "1 hour",
+        preferred_mode: "Online",
+        created_at: ISODate("2024-09-20T10:00:00Z")
+    },
+    {
+        request_id: "R1002",
+        student_id: "S002",
+        tutor_id: "T002",
+        subject: "Chemistry",
+        session_time: ISODate("2024-09-27T11:00:00Z"),
+        status: "Accepted",
+        message: "Preparing for chemistry exam.",
+        session_duration: "1.5 hours",
+        preferred_mode: "In-Person",
+        created_at: ISODate("2024-09-21T14:30:00Z")
+    },
+    {
+        request_id: "R1003",
+        student_id: "S003",
+        tutor_id: "T003",
+        subject: "English Literature",
+        session_time: ISODate("2024-09-24T17:00:00Z"),
+        status: "Completed",
+        message: "Assistance with essay writing.",
+        session_duration: "2 hours",
+        preferred_mode: "Online",
+        created_at: ISODate("2024-09-19T09:45:00Z")
+    },
+    {
+        request_id: "R1004",
+        student_id: "S004",
+        tutor_id: "T004",
+        subject: "Computer Science",
+        session_time: ISODate("2024-09-26T15:00:00Z"),
+        status: "Pending",
+        message: "Need guidance on programming projects.",
+        session_duration: "1 hour",
+        preferred_mode: "Online",
+        created_at: ISODate("2024-09-22T12:00:00Z")
+    },
+    {
+        request_id: "R1005",
+        student_id: "S001",
+        tutor_id: "T005",
+        subject: "Geography",
+        session_time: ISODate("2024-09-30T10:00:00Z"),
+        status: "Accepted",
+        message: "Help with world geography.",
+        session_duration: "1 hour",
+        preferred_mode: "In-Person",
+        created_at: ISODate("2024-09-23T11:30:00Z")
+    }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('66f2e13340725539c2deaf87'),
+    '1': ObjectId('66f2e13340725539c2deaf88'),
+    '2': ObjectId('66f2e13340725539c2deaf89'),
+    '3': ObjectId('66f2e13340725539c2deaf8a'),
+    '4': ObjectId('66f2e13340725539c2deaf8b')
+  }
+}
+db.createCollection("chats");
+{ ok: 1 }
+db.chats.insertMany([
+    {
+        chat_id: "C001",
+        student_id: "S001",
+        tutor_id: "T001",
+        message_history: [
+            { sender: "Emily", message: "I need help with algebra. Can we schedule a session?" },
+            { sender: "Dr. Brown", message: "Sure! How about tomorrow at 4 PM?" }
+        ],
+        timestamp: ISODate("2024-09-20T10:05:00Z"),
+        status: "Open",
+        unread_messages: 0
+    },
+    {
+        chat_id: "C002",
+        student_id: "S002",
+        tutor_id: "T002",
+        message_history: [
+            { sender: "Aakash", message: "I have some questions about the recent chemistry lecture." },
+            { sender: "Raj", message: "Sure, let's discuss them on Saturday." }
+        ],
+        timestamp: ISODate("2024-09-21T15:00:00Z"),
+        status: "Open",
+        unread_messages: 1
+    },
+    {
+        chat_id: "C003",
+        student_id: "S003",
+        tutor_id: "T003",
+        message_history: [
+            { sender: "Maria", message: "Can you review my essay draft?" },
+            { sender: "Laura", message: "I'd be happy to. Please send it over." }
+        ],
+        timestamp: ISODate("2024-09-19T10:00:00Z"),
+        status: "Closed",
+        unread_messages: 0
+    },
+    {
+        chat_id: "C004",
+        student_id: "S004",
+        tutor_id: "T004",
+        message_history: [
+            { sender: "John", message: "I need help with my coding project." },
+            { sender: "Carlos", message: "Let’s go over it during our session." }
+        ],
+        timestamp: ISODate("2024-09-22T12:30:00Z"),
+        status: "Open",
+        unread_messages: 2
+    },
+    {
+        chat_id: "C005",
+        student_id: "S005",
+        tutor_id: "T005",
+        message_history: [
+            { sender: "Sophie", message: "Could we review the geography topics we discussed earlier?" },
+            { sender: "Sophie Wang", message: "Absolutely, I’ll send you some additional resources." }
+        ],
+        timestamp: ISODate("2024-09-23T09:00:00Z"),
+        status: "Open",
+        unread_messages: 0
+    }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('66f2e15240725539c2deaf8c'),
+    '1': ObjectId('66f2e15240725539c2deaf8d'),
+    '2': ObjectId('66f2e15240725539c2deaf8e'),
+    '3': ObjectId('66f2e15240725539c2deaf8f'),
+    '4': ObjectId('66f2e15240725539c2deaf90')
+  }
+}
+db.createCollection("sessions ");
+{ ok: 1 }
+db.sessions.insertMany([
+    {
+        session_id: "S001",
+        tutor_id: "T001",
+        student_id: "S001",
+        subject: "Mathematics",
+        scheduled_time: ISODate("2024-09-25T16:00:00Z"),
+        duration: "1 hour",
+        status: "Completed",
+        feedback: "Great explanation!"
+    },
+    {
+        session_id: "S002",
+        tutor_id: "T002",
+        student_id: "S002",
+        subject: "Chemistry",
+        scheduled_time: ISODate("2024-09-27T11:00:00Z"),
+        duration: "1.5 hours",
+        status: "Completed",
+        feedback: "Very helpful session."
+    },
+    {
+        session_id: "S003",
+        tutor_id: "T003",
+        student_id: "S003",
+        subject: "English Literature",
+        scheduled_time: ISODate("2024-09-24T17:00:00Z"),
+        duration: "2 hours",
+        status: "Completed",
+        feedback: "Essay improved a lot."
+    },
+    {
+        session_id: "S004",
+        tutor_id: "T004",
+        student_id: "S004",
+        subject: "Computer Science",
+        scheduled_time: ISODate("2024-09-26T15:00:00Z"),
+        duration: "1 hour",
+        status: "Pending",
+        feedback: "N/A"
+    },
+    {
+        session_id: "S005",
+        tutor_id: "T005",
+        student_id: "S005",
+        subject: "Geography",
+        scheduled_time: ISODate("2024-09-30T10:00:00Z"),
+        duration: "1 hour",
+        status: "Completed",
+        feedback: "Insightful guidance."
+    }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('66f2e17540725539c2deaf91'),
+    '1': ObjectId('66f2e17540725539c2deaf92'),
+    '2': ObjectId('66f2e17540725539c2deaf93'),
+    '3': ObjectId('66f2e17540725539c2deaf94'),
+    '4': ObjectId('66f2e17540725539c2deaf95')
+  }
+}
+db.createCollection("reviews");
+{ ok: 1 }
+db.reviews.insertMany([
+    {
+        review_id: "R001",
+        student_id: "S001",
+        tutor_id: "T001",
+        rating: 5,
+        feedback: "Dr. Brown was excellent!",
+        review_date: ISODate("2024-09-26T00:00:00Z")
+    },
+    {
+        review_id: "R002",
+        student_id: "S002",
+        tutor_id: "T002",
+        rating: 4,
+        feedback: "Good session but late.",
+        review_date: ISODate("2024-09-28T00:00:00Z")
+    },
+    {
+        review_id: "R003",
+        student_id: "S003",
+        tutor_id: "T003",
+        rating: 5,
+        feedback: "Very engaging and helpful.",
+        review_date: ISODate("2024-09-25T00:00:00Z")
+    },
+    {
+        review_id: "R004",
+        student_id: "S004",
+        tutor_id: "T004",
+        rating: 4,
+        feedback: "Helpful but needed more time.",
+        review_date: ISODate("2024-09-27T00:00:00Z")
+    },
+    {
+        review_id: "R005",
+        student_id: "S005",
+        tutor_id: "T005",
+        rating: 5,
+        feedback: "Great insights into geography!",
+        review_date: ISODate("2024-09-30T00:00:00Z")
+    }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('66f2e18740725539c2deaf96'),
+    '1': ObjectId('66f2e18740725539c2deaf97'),
+    '2': ObjectId('66f2e18740725539c2deaf98'),
+    '3': ObjectId('66f2e18740725539c2deaf99'),
+    '4': ObjectId('66f2e18740725539c2deaf9a')
+  }
+}
+db.createCollection("payments");
+{ ok: 1 }
+db.payments.insertMany([
+    {
+        payment_id: "P001",
+        student_id: "S001",
+        tutor_id: "T001",
+        amount: 50,
+        payment_date: ISODate("2024-09-26T00:00:00Z"),
+        status: "Completed",
+        transaction_id: "TXN123456",
+        payment_method: "Credit Card"
+    },
+    {
+        payment_id: "P002",
+        student_id: "S002",
+        tutor_id: "T002",
+        amount: 45,
+        payment_date: ISODate("2024-09-28T00:00:00Z"),
+        status: "Completed",
+        transaction_id: "TXN123457",
+        payment_method: "Debit Card"
+    },
+    {
+        payment_id: "P003",
+        student_id: "S003",
+        tutor_id: "T003",
+        amount: 80,
+        payment_date: ISODate("2024-09-25T00:00:00Z"),
+        status: "Completed",
+        transaction_id: "TXN123458",
+        payment_method: "PayPal"
+    },
+    {
+        payment_id: "P004",
+        student_id: "S004",
+        tutor_id: "T004",
+        amount: 55,
+        payment_date: ISODate("2024-09-27T00:00:00Z"),
+        status: "Pending",
+        transaction_id: "TXN123459",
+        payment_method: "Credit Card"
+    },
+    {
+        payment_id: "P005",
+        student_id: "S005",
+        tutor_id: "T005",
+        amount: 42,
+        payment_date: ISODate("2024-09-30T00:00:00Z"),
+        status: "Completed",
+        transaction_id: "TXN123460",
+        payment_method: "Credit Card"
+    }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('66f2e19a40725539c2deaf9b'),
+    '1': ObjectId('66f2e19a40725539c2deaf9c'),
+    '2': ObjectId('66f2e19a40725539c2deaf9d'),
+    '3': ObjectId('66f2e19a40725539c2deaf9e'),
+    '4': ObjectId('66f2e19a40725539c2deaf9f')
+  }
+}
+db.createCollection("subject");
+{ ok: 1 }
+db.subjects.insertMany([
+    {
+        subject_id: "SB001",
+        name: "Mathematics",
+        category: "Science",
+        description: "Study of numbers, quantities, and shapes."
+    },
+    {
+        subject_id: "SB002",
+        name: "Chemistry",
+        category: "Science",
+        description: "Study of matter and its interactions."
+    },
+    {
+        subject_id: "SB003",
+        name: "English Literature",
+        category: "Arts",
+        description: "Study of literary works and texts."
+    },
+    {
+        subject_id: "SB004",
+        name: "Computer Science",
+        category: "Technology",
+        description: "Study of computers and computational systems."
+    },
+    {
+        subject_id: "SB005",
+        name: "Geography",
+        category: "Social Science",
+        description: "Study of Earth's landscapes and environments."
+    }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('66f2e1ae40725539c2deafa0'),
+    '1': ObjectId('66f2e1ae40725539c2deafa1'),
+    '2': ObjectId('66f2e1ae40725539c2deafa2'),
+    '3': ObjectId('66f2e1ae40725539c2deafa3'),
+    '4': ObjectId('66f2e1ae40725539c2deafa4')
+  }
+}
+db.createCollection("notification");
+{ ok: 1 }
+db.notifications.insertMany([
+    {
+        notification_id: "N001",
+        recipient_id: "S001",
+        message: "Your request for Mathematics tutoring is pending.",
+        type: "New Request",
+        status: "Sent",
+        timestamp: ISODate("2024-09-20T10:00:00Z")
+    },
+    {
+        notification_id: "N002",
+        recipient_id: "T002",
+        message: "You have a new request from Aakash Sharma.",
+        type: "New Request",
+        status: "Sent",
+        timestamp: ISODate("2024-09-21T15:00:00Z")
+    },
+    {
+        notification_id: "N003",
+        recipient_id: "S003",
+        message: "Your session with Laura Smith has been completed.",
+        type: "Session Completed",
+        status: "Sent",
+        timestamp: ISODate("2024-09-25T09:50:00Z")
+    },
+    {
+        notification_id: "N004",
+        recipient_id: "T004",
+        message: "Reminder: Your session with John Smith is scheduled for tomorrow.",
+        type: "Session Reminder",
+        status: "Sent",
+        timestamp: ISODate("2024-09-25T09:00:00Z")
+    },
+    {
+        notification_id: "N005",
+        recipient_id: "S005",
+        message: "You have a new review from Sophie Wang.",
+        type: "New Review",
+        status: "Sent",
+        timestamp: ISODate("2024-09-30T11:35:00Z")
+    }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('66f2e1c140725539c2deafa5'),
+    '1': ObjectId('66f2e1c140725539c2deafa6'),
+    '2': ObjectId('66f2e1c140725539c2deafa7'),
+    '3': ObjectId('66f2e1c140725539c2deafa8'),
+    '4': ObjectId('66f2e1c140725539c2deafa9')
+  }
+}
+db.createCollection("location");
+{ ok: 1 }
+db.locations.insertMany([
+    {
+        location_id: "L001",
+        name: "New York, USA",
+        latitude: 40.7128,
+        longitude: -74.0060
+    },
+    {
+        location_id: "L002",
+        name: "Delhi, India",
+        latitude: 28.6139,
+        longitude: 77.2090
+    },
+    {
+        location_id: "L003",
+        name: "Madrid, Spain",
+        latitude: 40.4168,
+        longitude: -3.7038
+    },
+    {
+        location_id: "L004",
+        name: "London, UK",
+        latitude: 51.5074,
+        longitude: -0.1278
+    },
+    {
+        location_id: "L005",
+        name: "Sydney, Australia",
+        latitude: -33.8688,
+        longitude: 151.2093
+    }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('66f2e1d340725539c2deafaa'),
+    '1': ObjectId('66f2e1d340725539c2deafab'),
+    '2': ObjectId('66f2e1d340725539c2deafac'),
+    '3': ObjectId('66f2e1d340725539c2deafad'),
+    '4': ObjectId('66f2e1d340725539c2deafae')
+  }
+}
+db.students.insertOne({
+    student_id: "S006",
+    name: "Emily Brown",
+    email: "emily.brown@example.com",
+    phone: "+1-555-1234",
+    address: "789 Oak St, Springfield, IL, USA",
+    enrollment_date: ISODate("2024-09-19T00:00:00Z")
+});
+{
+  acknowledged: true,
+  insertedId: ObjectId('66f2e1df40725539c2deafaf')
+}
+db.students.createIndex({ student_id: 1 });
+student_id_1
+db.students.createIndex({ enrollment_date: 1 });
+enrollment_date_1
+db.tutors.createIndex({ tutor_id: 1 });
+tutor_id_1
+db.tutors.createIndex({ expertise: 1 });
+expertise_1
+db.tutors.createIndex({ average_rating: -1 });
+average_rating_-1
+db.requests.createIndex({ request_id: 1 });
+request_id_1
+db.requests.createIndex({ tutor_id: 1 });
+tutor_id_1
+db.requests.createIndex({ status: 1 });
+status_1
+db.chats.createIndex({ chat_id: 1 });
+chat_id_1
+db.chats.createIndex({ tutor_id: 1 });
+tutor_id_1
+db.sessions.createIndex({ session_id: 1 });
+session_id_1
+db.sessions.createIndex({ tutor_id: 1 });
+tutor_id_1
+db.reviews.createIndex({ review_id: 1 });
+review_id_1
+db.payments.createIndex({ payment_id: 1 });
+payment_id_1
+db.subjects.createIndex({ name: 1 });
+name_1
+db.subjects.createIndex({ subject_id: 1 });
+subject_id_1
+db.notifications.createIndex({ notification_id: 1 });
+notification_id_1
+db.notifications.createIndex({ type: 1 });
+type_1
+db.locations.createIndex({ location_id: 1 });
+location_id_1
+db.locations.createIndex({ city: 1 });
+city_1

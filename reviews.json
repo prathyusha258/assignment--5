@@ -1,0 +1,65 @@
+[{
+  "_id": {
+    "$oid": "66f2e18740725539c2deaf96"
+  },
+  "review_id": "R001",
+  "student_id": "S001",
+  "tutor_id": "T001",
+  "rating": 5,
+  "feedback": "Dr. Brown was excellent!",
+  "review_date": {
+    "$date": "2024-09-26T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66f2e18740725539c2deaf97"
+  },
+  "review_id": "R002",
+  "student_id": "S002",
+  "tutor_id": "T002",
+  "rating": 4,
+  "feedback": "Good session but late.",
+  "review_date": {
+    "$date": "2024-09-28T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66f2e18740725539c2deaf98"
+  },
+  "review_id": "R003",
+  "student_id": "S003",
+  "tutor_id": "T003",
+  "rating": 5,
+  "feedback": "Very engaging and helpful.",
+  "review_date": {
+    "$date": "2024-09-25T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66f2e18740725539c2deaf99"
+  },
+  "review_id": "R004",
+  "student_id": "S004",
+  "tutor_id": "T004",
+  "rating": 4,
+  "feedback": "Helpful but needed more time.",
+  "review_date": {
+    "$date": "2024-09-27T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66f2e18740725539c2deaf9a"
+  },
+  "review_id": "R005",
+  "student_id": "S005",
+  "tutor_id": "T005",
+  "rating": 5,
+  "feedback": "Great insights into geography!",
+  "review_date": {
+    "$date": "2024-09-30T00:00:00.000Z"
+  }
+}]

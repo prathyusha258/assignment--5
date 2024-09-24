@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "66f2e1ae40725539c2deafa0"
+  },
+  "subject_id": "SB001",
+  "name": "Mathematics",
+  "category": "Science",
+  "description": "Study of numbers, quantities, and shapes."
+},
+{
+  "_id": {
+    "$oid": "66f2e1ae40725539c2deafa1"
+  },
+  "subject_id": "SB002",
+  "name": "Chemistry",
+  "category": "Science",
+  "description": "Study of matter and its interactions."
+},
+{
+  "_id": {
+    "$oid": "66f2e1ae40725539c2deafa2"
+  },
+  "subject_id": "SB003",
+  "name": "English Literature",
+  "category": "Arts",
+  "description": "Study of literary works and texts."
+},
+{
+  "_id": {
+    "$oid": "66f2e1ae40725539c2deafa3"
+  },
+  "subject_id": "SB004",
+  "name": "Computer Science",
+  "category": "Technology",
+  "description": "Study of computers and computational systems."
+},
+{
+  "_id": {
+    "$oid": "66f2e1ae40725539c2deafa4"
+  },
+  "subject_id": "SB005",
+  "name": "Geography",
+  "category": "Social Science",
+  "description": "Study of Earth's landscapes and environments."
+}]

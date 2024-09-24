@@ -1,0 +1,110 @@
+[{
+  "_id": {
+    "$oid": "66f2e11940725539c2deaf82"
+  },
+  "tutor_id": "T001",
+  "name": "Dr. Alice Brown",
+  "email": "alice.brown@example.com",
+  "phone_number": "+1-555-234-5678",
+  "specialization_subjects": [
+    "Mathematics",
+    "Physics"
+  ],
+  "experience_years": 10,
+  "qualifications": "PhD in Physics",
+  "availability": "Weekdays, 9 AM - 3 PM",
+  "hourly_rate": 50,
+  "rating": 4.9,
+  "languages_spoken": [
+    "English",
+    "Spanish"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66f2e11940725539c2deaf83"
+  },
+  "tutor_id": "T002",
+  "name": "Raj Patel",
+  "email": "raj.patel@example.com",
+  "phone_number": "+91-9876543210",
+  "specialization_subjects": [
+    "Chemistry",
+    "Biology"
+  ],
+  "experience_years": 8,
+  "qualifications": "M.Sc. in Chemistry",
+  "availability": "Weekends, 11 AM - 3 PM",
+  "hourly_rate": 45,
+  "rating": 4.7,
+  "languages_spoken": [
+    "English",
+    "Hindi"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66f2e11940725539c2deaf84"
+  },
+  "tutor_id": "T003",
+  "name": "Laura Smith",
+  "email": "laura.smith@example.com",
+  "phone_number": "+44-701-234-567",
+  "specialization_subjects": [
+    "English Literature",
+    "History"
+  ],
+  "experience_years": 6,
+  "qualifications": "MA in English Literature",
+  "availability": "Weekdays, 2 PM - 6 PM",
+  "hourly_rate": 40,
+  "rating": 4.8,
+  "languages_spoken": [
+    "English",
+    "French"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66f2e11940725539c2deaf85"
+  },
+  "tutor_id": "T004",
+  "name": "Carlos Garcia",
+  "email": "carlos.garcia@example.com",
+  "phone_number": "+34-665-432-109",
+  "specialization_subjects": [
+    "Computer Science",
+    "Mathematics"
+  ],
+  "experience_years": 12,
+  "qualifications": "B.Sc. in Computer Science",
+  "availability": "Weekdays, 10 AM - 4 PM",
+  "hourly_rate": 55,
+  "rating": 4.9,
+  "languages_spoken": [
+    "Spanish",
+    "English"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66f2e11940725539c2deaf86"
+  },
+  "tutor_id": "T005",
+  "name": "Sophie Wang",
+  "email": "sophie.wang@example.com",
+  "phone_number": "+61-412-678-901",
+  "specialization_subjects": [
+    "Geography",
+    "English"
+  ],
+  "experience_years": 5,
+  "qualifications": "B.A. in Geography",
+  "availability": "Weekends, 9 AM - 1 PM",
+  "hourly_rate": 42,
+  "rating": 4.6,
+  "languages_spoken": [
+    "English",
+    "Mandarin"
+  ]
+}]

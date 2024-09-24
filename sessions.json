@@ -1,0 +1,75 @@
+[{
+  "_id": {
+    "$oid": "66f2e17540725539c2deaf91"
+  },
+  "session_id": "S001",
+  "tutor_id": "T001",
+  "student_id": "S001",
+  "subject": "Mathematics",
+  "scheduled_time": {
+    "$date": "2024-09-25T16:00:00.000Z"
+  },
+  "duration": "1 hour",
+  "status": "Completed",
+  "feedback": "Great explanation!"
+},
+{
+  "_id": {
+    "$oid": "66f2e17540725539c2deaf92"
+  },
+  "session_id": "S002",
+  "tutor_id": "T002",
+  "student_id": "S002",
+  "subject": "Chemistry",
+  "scheduled_time": {
+    "$date": "2024-09-27T11:00:00.000Z"
+  },
+  "duration": "1.5 hours",
+  "status": "Completed",
+  "feedback": "Very helpful session."
+},
+{
+  "_id": {
+    "$oid": "66f2e17540725539c2deaf93"
+  },
+  "session_id": "S003",
+  "tutor_id": "T003",
+  "student_id": "S003",
+  "subject": "English Literature",
+  "scheduled_time": {
+    "$date": "2024-09-24T17:00:00.000Z"
+  },
+  "duration": "2 hours",
+  "status": "Completed",
+  "feedback": "Essay improved a lot."
+},
+{
+  "_id": {
+    "$oid": "66f2e17540725539c2deaf94"
+  },
+  "session_id": "S004",
+  "tutor_id": "T004",
+  "student_id": "S004",
+  "subject": "Computer Science",
+  "scheduled_time": {
+    "$date": "2024-09-26T15:00:00.000Z"
+  },
+  "duration": "1 hour",
+  "status": "Pending",
+  "feedback": "N/A"
+},
+{
+  "_id": {
+    "$oid": "66f2e17540725539c2deaf95"
+  },
+  "session_id": "S005",
+  "tutor_id": "T005",
+  "student_id": "S005",
+  "subject": "Geography",
+  "scheduled_time": {
+    "$date": "2024-09-30T10:00:00.000Z"
+  },
+  "duration": "1 hour",
+  "status": "Completed",
+  "feedback": "Insightful guidance."
+}]

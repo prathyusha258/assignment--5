@@ -1,0 +1,115 @@
+[{
+  "_id": {
+    "$oid": "66f2e15240725539c2deaf8c"
+  },
+  "chat_id": "C001",
+  "student_id": "S001",
+  "tutor_id": "T001",
+  "message_history": [
+    {
+      "sender": "Emily",
+      "message": "I need help with algebra. Can we schedule a session?"
+    },
+    {
+      "sender": "Dr. Brown",
+      "message": "Sure! How about tomorrow at 4 PM?"
+    }
+  ],
+  "timestamp": {
+    "$date": "2024-09-20T10:05:00.000Z"
+  },
+  "status": "Open",
+  "unread_messages": 0
+},
+{
+  "_id": {
+    "$oid": "66f2e15240725539c2deaf8d"
+  },
+  "chat_id": "C002",
+  "student_id": "S002",
+  "tutor_id": "T002",
+  "message_history": [
+    {
+      "sender": "Aakash",
+      "message": "I have some questions about the recent chemistry lecture."
+    },
+    {
+      "sender": "Raj",
+      "message": "Sure, let's discuss them on Saturday."
+    }
+  ],
+  "timestamp": {
+    "$date": "2024-09-21T15:00:00.000Z"
+  },
+  "status": "Open",
+  "unread_messages": 1
+},
+{
+  "_id": {
+    "$oid": "66f2e15240725539c2deaf8e"
+  },
+  "chat_id": "C003",
+  "student_id": "S003",
+  "tutor_id": "T003",
+  "message_history": [
+    {
+      "sender": "Maria",
+      "message": "Can you review my essay draft?"
+    },
+    {
+      "sender": "Laura",
+      "message": "I'd be happy to. Please send it over."
+    }
+  ],
+  "timestamp": {
+    "$date": "2024-09-19T10:00:00.000Z"
+  },
+  "status": "Closed",
+  "unread_messages": 0
+},
+{
+  "_id": {
+    "$oid": "66f2e15240725539c2deaf8f"
+  },
+  "chat_id": "C004",
+  "student_id": "S004",
+  "tutor_id": "T004",
+  "message_history": [
+    {
+      "sender": "John",
+      "message": "I need help with my coding project."
+    },
+    {
+      "sender": "Carlos",
+      "message": "Let’s go over it during our session."
+    }
+  ],
+  "timestamp": {
+    "$date": "2024-09-22T12:30:00.000Z"
+  },
+  "status": "Open",
+  "unread_messages": 2
+},
+{
+  "_id": {
+    "$oid": "66f2e15240725539c2deaf90"
+  },
+  "chat_id": "C005",
+  "student_id": "S005",
+  "tutor_id": "T005",
+  "message_history": [
+    {
+      "sender": "Sophie",
+      "message": "Could we review the geography topics we discussed earlier?"
+    },
+    {
+      "sender": "Sophie Wang",
+      "message": "Absolutely, I’ll send you some additional resources."
+    }
+  ],
+  "timestamp": {
+    "$date": "2024-09-23T09:00:00.000Z"
+  },
+  "status": "Open",
+  "unread_messages": 0
+}]

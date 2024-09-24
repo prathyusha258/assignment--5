@@ -1,0 +1,75 @@
+[{
+  "_id": {
+    "$oid": "66f2e19a40725539c2deaf9b"
+  },
+  "payment_id": "P001",
+  "student_id": "S001",
+  "tutor_id": "T001",
+  "amount": 50,
+  "payment_date": {
+    "$date": "2024-09-26T00:00:00.000Z"
+  },
+  "status": "Completed",
+  "transaction_id": "TXN123456",
+  "payment_method": "Credit Card"
+},
+{
+  "_id": {
+    "$oid": "66f2e19a40725539c2deaf9c"
+  },
+  "payment_id": "P002",
+  "student_id": "S002",
+  "tutor_id": "T002",
+  "amount": 45,
+  "payment_date": {
+    "$date": "2024-09-28T00:00:00.000Z"
+  },
+  "status": "Completed",
+  "transaction_id": "TXN123457",
+  "payment_method": "Debit Card"
+},
+{
+  "_id": {
+    "$oid": "66f2e19a40725539c2deaf9d"
+  },
+  "payment_id": "P003",
+  "student_id": "S003",
+  "tutor_id": "T003",
+  "amount": 80,
+  "payment_date": {
+    "$date": "2024-09-25T00:00:00.000Z"
+  },
+  "status": "Completed",
+  "transaction_id": "TXN123458",
+  "payment_method": "PayPal"
+},
+{
+  "_id": {
+    "$oid": "66f2e19a40725539c2deaf9e"
+  },
+  "payment_id": "P004",
+  "student_id": "S004",
+  "tutor_id": "T004",
+  "amount": 55,
+  "payment_date": {
+    "$date": "2024-09-27T00:00:00.000Z"
+  },
+  "status": "Pending",
+  "transaction_id": "TXN123459",
+  "payment_method": "Credit Card"
+},
+{
+  "_id": {
+    "$oid": "66f2e19a40725539c2deaf9f"
+  },
+  "payment_id": "P005",
+  "student_id": "S005",
+  "tutor_id": "T005",
+  "amount": 42,
+  "payment_date": {
+    "$date": "2024-09-30T00:00:00.000Z"
+  },
+  "status": "Completed",
+  "transaction_id": "TXN123460",
+  "payment_method": "Credit Card"
+}]

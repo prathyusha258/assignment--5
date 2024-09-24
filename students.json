@@ -1,0 +1,120 @@
+[{
+  "_id": {
+    "$oid": "66f2e10040725539c2deaf7d"
+  },
+  "student_id": "S001",
+  "name": "Emily Johnson",
+  "email": "emily.johnson@example.com",
+  "phone_number": "+1-555-123-4567",
+  "subjects": [
+    "Mathematics",
+    "Physics"
+  ],
+  "grade_level": 10,
+  "location": "New York, USA",
+  "preferred_time": "Weekdays, 4 PM - 6 PM",
+  "rating": 4.8,
+  "requests": [
+    "R1001",
+    "R1005",
+    "R1010"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66f2e10040725539c2deaf7e"
+  },
+  "student_id": "S002",
+  "name": "Aakash Sharma",
+  "email": "aakash.sharma@example.com",
+  "phone_number": "+91-9876543210",
+  "subjects": [
+    "Chemistry",
+    "Biology"
+  ],
+  "grade_level": 12,
+  "location": "Delhi, India",
+  "preferred_time": "Weekends, 10 AM - 12 PM",
+  "rating": 4.6,
+  "requests": [
+    "R1002",
+    "R1008"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66f2e10040725539c2deaf7f"
+  },
+  "student_id": "S003",
+  "name": "Maria Gonzalez",
+  "email": "maria.gonzalez@example.com",
+  "phone_number": "+34-666-987-654",
+  "subjects": [
+    "English Literature",
+    "History"
+  ],
+  "grade_level": 8,
+  "location": "Madrid, Spain",
+  "preferred_time": "Weekdays, 5 PM - 7 PM",
+  "rating": 4.9,
+  "requests": [
+    "R1003",
+    "R1012",
+    "R1015"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66f2e10040725539c2deaf80"
+  },
+  "student_id": "S004",
+  "name": "John Smith",
+  "email": "john.smith@example.com",
+  "phone_number": "+44-700-567-890",
+  "subjects": [
+    "Computer Science",
+    "Mathematics"
+  ],
+  "grade_level": "Undergraduate",
+  "location": "London, UK",
+  "preferred_time": "Weekdays, 2 PM - 4 PM",
+  "rating": 4.7,
+  "requests": [
+    "R1004",
+    "R1011"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66f2e10040725539c2deaf81"
+  },
+  "student_id": "S005",
+  "name": "Sophie Lee",
+  "email": "sophie.lee@example.com",
+  "phone_number": "+61-412-345-678",
+  "subjects": [
+    "Geography",
+    "English"
+  ],
+  "grade_level": 11,
+  "location": "Sydney, Australia",
+  "preferred_time": "Weekends, 9 AM - 11 AM",
+  "rating": 4.5,
+  "requests": [
+    "R1006",
+    "R1013"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66f2e1df40725539c2deafaf"
+  },
+  "student_id": "S006",
+  "name": "Emily Brown",
+  "email": "emily.brown@example.com",
+  "phone": "+1-555-1234",
+  "address": "789 Oak St, Springfield, IL, USA",
+  "enrollment_date": {
+    "$date": "2024-09-19T00:00:00.000Z"
+  }
+}]
